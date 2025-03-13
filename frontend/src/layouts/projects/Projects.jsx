@@ -96,10 +96,10 @@ function Projects() {
 
                 </div>
                 <div className='task-card-container'>
-                  <p className='task-title'>Attend Nischal’s Birthday
+                  <p className='task-title'> Employee Timesheet System
                     Party</p>
                   <div className='task-desc-container'>
-                    <p className='task-desc'>Buy gifts on  way and pick up cake frothem the bakery. (6 PM | Fresh Elements).....n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | </p>
+                    <p className='task-desc'>A system for employees to log work hours and track approvals. It ensures accurate timesheet submission and manager approvals. Employees can generate reports for payroll processing. The system is integrated with authentication and access control. </p>
                   </div>
                   <div className='task-card-footer-container'>
                     <div>
@@ -116,10 +116,9 @@ function Projects() {
                   <p className='created'>Created on: 20/06/2023</p>
                 </div>
                 <div className='task-card-container'>
-                  <p className='task-title'>Attend Nischal’s Birthday
-                    Party</p>
+                  <p className='task-title'>Payroll Management System</p>
                   <div className='task-desc-container'>
-                    <p className='task-desc'>Buy gifts on  way and pick up cake frothem the bakery. (6 PM | Fresh Elements).....n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | </p>
+                    <p className='task-desc'>Automates salary calculations, deductions, and payslip generation. It manages tax deductions and direct salary deposits. Employees can view their salary history and payslips. Payroll reports are generated for HR and finance teams.</p>
                   </div>
                   <div className='task-card-footer-container'>
                     <div>
@@ -133,7 +132,7 @@ function Projects() {
                       </div>
                     </div>
                   </div>
-                  <p className='created'>Created on: 20/06/2023</p>
+                  <p className='created'>Created on: 10/03/2025</p>
                 </div>
               </div>
             </div>
@@ -181,10 +180,10 @@ function Projects() {
                   </div>
                 </div>
                 <div className='task-card-container'>
-                  <p className='task-title'>Attend Nischal’s Birthday
+                  <p className='task-title'>Leave Management System
                     Party</p>
                   <div className='task-desc-container'>
-                    <p className='task-desc'>Buy gifts on  way and pick up cake frothem the bakery. (6 PM | Fresh Elements).....n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | </p>
+                    <p className='task-desc'>Allows employees to apply for leaves and track approval status. Managers can approve or reject leave requests based on policies. A calendar view displays employee leave schedules. Leave reports help HR manage workforce availability. </p>
                   </div>
                   <div className='task-card-footer-container'>
                     <div>
@@ -213,10 +212,10 @@ function Projects() {
                   </div>
                 </div>
                 <div className='task-card-container'>
-                  <p className='task-title'>Attend Nischal’s Birthday
+                  <p className='task-title'>Performance Review System
                     Party</p>
                   <div className='task-desc-container'>
-                    <p className='task-desc'>Buy gifts on  way and pick up cake frothem the bakery. (6 PM | Fresh Elements).....n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | </p>
+                    <p className='task-desc'>Enables managers to assess employee performance and provide feedback. Employees can view ratings and comments from managers. The system generates performance reports for promotions. It integrates KPIs and analytics for better evaluation.</p>
                   </div>
                   <div className='task-card-footer-container'>
                     <div>
@@ -245,10 +244,10 @@ function Projects() {
                   </div>
                 </div>
                 <div className='task-card-container'>
-                  <p className='task-title'>Attend Nischal’s Birthday
+                  <p className='task-title'>Attendance Tracking System
                     Party</p>
                   <div className='task-desc-container'>
-                    <p className='task-desc'>Buy gifts on  way and pick up cake frothem the bakery. (6 PM | Fresh Elements).....n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | </p>
+                    <p className='task-desc'>Tracks employee check-in and check-out times for daily attendance. Uses biometric or online login methods for accuracy. Generates attendance reports for payroll processing. Flags late arrivals and absentees for HR review.</p>
                   </div>
                   <div className='task-card-footer-container'>
                     <div>

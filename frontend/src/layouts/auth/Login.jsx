@@ -21,7 +21,7 @@ function Login() {
         e.preventDefault();
         setLoading(true);
         try {
-            const response = await axios.post('api/login', formData);
+            const response = await axios.post('http://localhost:8000/api/login', formData);
             localStorage.setItem('tm_token', response.data.token);
             navigate('/admin/dashboard')
         } catch (error) {
@@ -31,7 +31,7 @@ function Login() {
                 password: ''
             });
             toast({
-                title: Error,
+                title: "ppppppp",
                 status: 'error',
                 position: 'top',
                 duration: 5000,

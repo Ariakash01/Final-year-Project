@@ -21,10 +21,10 @@ function ReadProjectModal({ isOpen, onClose }) {
                 <ModalCloseButton />
                 <ModalBody>
                     <div className='task-card-container'>
-                        <p className='task-title'>Attend Nischal’s Birthday
+                        <p className='task-title'>Employee Timesheet System
                             Party</p>
                         <div className='task-desc-container'>
-                            <p className='task-desc'>Buy gifts on  way and pick up cake frothem the bakery. (6 PM | Fresh Elements).....n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | </p>
+                            <p className='task-desc'>A system for employees to log work hours and track approvals. It ensures accurate timesheet submission and manager approvals. Employees can generate reports for payroll processing. The system is integrated with authentication and access control. </p>
                         </div>
                         <div className='task-card-footer-container'>
                             <div>
@@ -38,7 +38,7 @@ function ReadProjectModal({ isOpen, onClose }) {
                                 </div>
                             </div>
                         </div>
-                        <p className='created'>Created on: 20/06/2023</p>
+                        <p className='created'>Created on: 10/03/2025</p>
                     </div>
                 </ModalBody>
                 <ModalFooter>

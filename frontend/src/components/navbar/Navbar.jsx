@@ -17,8 +17,8 @@ function Navbar() {
                     <IoIosNotifications  className='read-icon' />
                 </div>
                 <div>
-                    <p className='nav-day-text'>Tuesday</p>
-                    <p className='nav-date-text'>20/06/2023</p>
+                    <p className='nav-day-text'>Friday</p>
+                    <p className='nav-date-text'>14/03/2025</p>
                 </div>
             </div>
         </div>

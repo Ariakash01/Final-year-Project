@@ -94,10 +94,10 @@ function Tasks() {
                                     <button className='table-btn-task' onClick={openAddTaskModal}><IoMdAdd />Add Task</button>
                                 </div>
                                 <div className='task-card-container'>
-                                    <p className='task-title'>Attend Nischal’s Birthday
+                                    <p className='task-title'>Create Timesheet API
                                         Party</p>
                                     <div className='task-desc-container'>
-                                        <p className='task-desc'>Buy gifts on  way and pick up cake frothem the bakery. (6 PM | Fresh Elements).....n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | </p>
+                                        <p className='task-desc'>Develop RESTful APIs for timesheet CRUD operations. Implement data validation and authentication for secure access. The API should allow employees to submit and update entries. Managers must have access to approve or reject requests.</p>
                                     </div>
                                     <div className='task-card-footer-container'>
                                         <div>
@@ -114,10 +114,10 @@ function Tasks() {
                                     <p className='created'>Created on: 20/06/2023</p>
                                 </div>
                                 <div className='task-card-container'>
-                                    <p className='task-title'>Attend Nischal’s Birthday
+                                    <p className='task-title'>Implement Role-Based Access
                                         Party</p>
                                     <div className='task-desc-container'>
-                                        <p className='task-desc'>Buy gifts on  way and pick up cake frothem the bakery. (6 PM | Fresh Elements).....n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | </p>
+                                        <p className='task-desc'>Restrict features based on employee, manager, and admin roles. Employees can submit and view their own timesheets. Managers can approve, reject, or request changes. Admins have full control over timesheet records and settings. </p>
                                     </div>
                                     <div className='task-card-footer-container'>
                                         <div>
@@ -171,10 +171,10 @@ function Tasks() {
                                     </div>
                                 </div>
                                 <div className='task-card-container'>
-                                    <p className='task-title'>Attend Nischal’s Birthday
+                                    <p className='task-title'>Generate Payroll Reports
                                         Party</p>
                                     <div className='task-desc-container'>
-                                        <p className='task-desc'>Buy gifts on  way and pick up cake frothem the bakery. (6 PM | Fresh Elements).....n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | </p>
+                                        <p className='task-desc'>Develop functionality to generate salary reports from timesheets. Automate calculations based on working hours and rates. Ensure reports include deductions, bonuses, and overtime. Provide PDF export and download options.</p>
                                     </div>
                                     <div className='task-card-footer-container'>
                                         <div>
@@ -203,10 +203,10 @@ function Tasks() {
                                     </div>
                                 </div>
                                 <div className='task-card-container'>
-                                    <p className='task-title'>Attend Nischal’s Birthday
+                                    <p className='task-title'>Integrate Resume Parser
                                         Party</p>
                                     <div className='task-desc-container'>
-                                        <p className='task-desc'>Buy gifts on  way and pick up cake frothem the bakery. (6 PM | Fresh Elements).....n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | n  way and pick up cake frothem the bakery. (6 PM | </p>
+                                        <p className='task-desc'>Develop functionality to extract key details from resumes. Parse name, skills, experience, and education automatically. Store parsed data in a structured format for HR review. Improve candidate shortlisting efficiency.</p>
                                     </div>
                                     <div className='task-card-footer-container'>
                                         <div>
