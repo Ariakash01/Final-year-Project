@@ -1,3 +1,17 @@
+.app-main-container {
+    border: 1px solid;
+    display: flex;
+}
+
+.app-main-left-container {
+    width: 25%;
+
+}
+
+.app-main-right-container {
+    width: 70%;
+}
+
 .welcome-main-container {
     background-color: white;
     border-radius: 30px;

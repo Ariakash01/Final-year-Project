@@ -20,10 +20,10 @@ import ReadTaskModal from './modals/ReadTask';
 import { IoMdAdd } from "react-icons/io";
 import axios from 'axios';
 
-function Tasks() {
+function Tasks({ user, handleLogout }) {
     const [isAddTaskModalOpen, setIsAddTaskModalOpen] = useState(false);
     const [isReadTaskModalOpen, setIsReadTaskModalOpen] = useState(false);
-    
+
     const openAddTaskModal = () => {
         setIsAddTaskModalOpen(true);
     };
@@ -42,7 +42,7 @@ function Tasks() {
             <AddTaskModal isOpen={isAddTaskModalOpen} onClose={closeAddTaskModal} />
             <ReadTaskModal isOpen={isReadTaskModalOpen} onClose={closeReadTaskModal} />
             <div className='app-main-container'>
-                <div className='app-main-left-container'><Sidenav /></div>
+                <div className='app-main-left-container'><Sidenav user={user} handleLogout={handleLogout} /></div>
                 <div className='app-main-right-container'>
                     <Navbar />
                     <div className='dashboard-main-container'>

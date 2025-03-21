@@ -30,14 +30,21 @@
 
 .table-btn {
     background-color: white;
+    color: black;
     padding: 0.7rem;
     border-radius: 1rem;
     font-family: Inter;
     font-size: 14px;
     font-weight: 400;
+    width: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+
+}
+
+.table-btn:hover {
+    color: #fff;
 }

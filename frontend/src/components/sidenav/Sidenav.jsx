@@ -10,15 +10,15 @@ import { LuLogOut } from "react-icons/lu";
 import profile from '../../assets/sidenav/profil.jpg';
 import { Link, useLocation } from "react-router-dom";
 
-function Sidenav() {
+function Sidenav({ user, handleLogout }) {
   const location = useLocation();
 
   return (
     <div className='sidenav-main-container'>
       <div className='sidenav-profile-container'>
         <img className='sidenav-profile-img' src={profile} alt="Profile" />
-        <p className='sidenav-profile-name'>Ariakash S</p>
-        <p className='sidenav-profile-email'>ariakash067@gmail.com</p>
+        <p className='sidenav-profile-name'>{user.firstName}</p>
+        <p className='sidenav-profile-email'>{user.email}</p>
       </div>
       <div className='sidenav-list-main-container'>
         <Link to="/admin/dashboard"><div className={`sidenav-list ${location.pathname === "/admin/dashboard" ? "default-hover" : ""}`}><span><MdDashboard className='sidenav-icon' /></span><p className='sidenav-list-text'>Dashboard</p></div></Link>
@@ -27,8 +27,12 @@ function Sidenav() {
         <Link to="/admin/tasks"><div className={`sidenav-list ${location.pathname === "/admin/tasks" ? "default-hover" : ""}`}><span><FaTasks className='sidenav-icon' /></span><p className='sidenav-list-text'>Tasks</p></div></Link>
         <Link to="/admin/timesheets"><div className={`sidenav-list ${location.pathname === "/admin/timesheets" ? "default-hover" : ""}`}><span><IoIosTime className='sidenav-icon' /></span><p className='sidenav-list-text'>Timesheets</p></div></Link>
         <Link to="/admin/attendance"><div className={`sidenav-list ${location.pathname === "/admin/attendance" ? "default-hover" : ""}`}><span><MdInsertInvitation className='sidenav-icon' /></span><p className='sidenav-list-text'>Attendance</p></div></Link>
-        <Link to="/"><div className={`sidenav-list ${location.pathname === "/logout" ? "default-hover" : ""}`}><span><LuLogOut className='sidenav-icon' /></span><p className='sidenav-list-text'>Logout</p></div></Link>
-      </div>
+        <Link to="/register" onClick={() => handleLogout()}>
+          <div className={`sidenav-list ${location.pathname === "/logout" ? "default-hover" : ""}`}>
+            <span><LuLogOut className="sidenav-icon" /></span>
+            <p className="sidenav-list-text">Logout</p>
+          </div>
+        </Link>      </div>
     </div>
   )
 }

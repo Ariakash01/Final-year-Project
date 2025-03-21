@@ -20,7 +20,7 @@ import ReadProjectModal from './modals/ReadProject';
 import { IoMdAdd } from "react-icons/io";
 
 
-function Projects() {
+function Projects({ user, handleLogout }) {
   const [isAddProjectModalOpen, setIsAddProjectModalOpen] = useState(false);
   const [isReadProjectModalOpen, setIsReadProjectModalOpen] = useState(false);
 
@@ -43,7 +43,7 @@ function Projects() {
       <AddProjectModal isOpen={isAddProjectModalOpen} onClose={closeAddProjectModal} />
       <ReadProjectModal isOpen={isReadProjectModalOpen} onClose={closeReadProjectModal} />
       <div className='app-main-container'>
-        <div className='app-main-left-container'><Sidenav /></div>
+        <div className='app-main-left-container'><Sidenav user={user} handleLogout={handleLogout} /></div>
         <div className='app-main-right-container'>
           <Navbar />
           <div className='dashboard-main-container'>

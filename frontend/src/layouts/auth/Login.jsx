@@ -8,7 +8,7 @@ import axios from 'axios';
 import { useToast, Spinner } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
-function Login() {
+const Login = (setUser) => {
     const navigate = useNavigate();
     const toast = useToast();
     const [loading, setLoading] = useState(false);
@@ -22,7 +22,8 @@ function Login() {
         setLoading(true);
         try {
             const response = await axios.post('http://localhost:8000/api/login', formData);
-            localStorage.setItem('tm_token', response.data.token);
+            localStorage.setItem('tm_token', response.data);
+            /*             setUser(response.data.user) */
             navigate('/admin/dashboard')
         } catch (error) {
             let Error = error.response.data.message

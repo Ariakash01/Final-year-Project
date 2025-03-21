@@ -21,7 +21,7 @@ import { FcStatistics } from "react-icons/fc";
 import AddTimesheetModal from './modals/AddTimesheet';
 import axios from 'axios';
 
-function Timesheets() {
+function Timesheets({ user, handleLogout }) {
   const [isAddTimesheetModalOpen, setIsAddTimesheetModalOpen] = useState(false);
   const [timesheetsData, setTimesheetsData] = useState([]);
   const [timesheetsStats, setTimesheetsStats] = useState({
@@ -62,7 +62,7 @@ function Timesheets() {
     <>
       <AddTimesheetModal isOpen={isAddTimesheetModalOpen} onClose={closeAddTimesheetModal} />
       <div className='app-main-container'>
-        <div className='app-main-left-container'><Sidenav /></div>
+        <div className='app-main-left-container'><Sidenav user={user} handleLogout={handleLogout} /></div>
         <div className='app-main-right-container'>
           <Navbar />
           <div className='task-status-card-container'>
@@ -123,7 +123,7 @@ function Timesheets() {
                   <Th>Action</Th>
                 </Tr>
               </Thead>
-            {/*   <Tbody>
+              {/*   <Tbody>
                 <Tr>
                   <Td>inches</Td>
                   <Td>inches</Td>

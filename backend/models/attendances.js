@@ -5,7 +5,7 @@ const attendanceSchema = new mongoose.Schema({
     day: { type: String, required: true },
     timeIn: { type: String },
     timeOut: { type: String },
-    workingHours: { type: String}
+    workingHours: { type: String }
 });
 
 module.exports = mongoose.model('Attendance', attendanceSchema);

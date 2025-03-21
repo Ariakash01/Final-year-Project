@@ -12,27 +12,52 @@ import { FcStatistics } from "react-icons/fc";
 import Navbar from '../../components/navbar/Navbar';
 import axios from 'axios';
 
-function Dashboard() {
+function Dashboard({ setUser, user, handleLogout }) {
   const [dashboardData, setDashboardData] = useState([]);
 
   const getDashboard = async () => {
     const response = await axios.get('api/dashboard')
     setDashboardData(response.data)
+
   }
+
+  const handleSubmit = async () => {
+    try {
+      console.log("Start...................");
+      const email = localStorage.getItem('email');  // Get email from localStorage
+      console.log(email);
+
+      if (!email) {
+        console.error("Email not found in localStorage");
+        return;
+      }
+
+      const response = await axios.post('http://localhost:8000/api/login-details', { email });
+      console.log(response.data);
+      setUser(response.data.user)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
   useEffect(() => {
+    handleSubmit()
+
     getDashboard()
+
   }, [])
-  
+
 
   return (
     <>
       <div className='app-main-container'>
-        <div className='app-main-left-container'><Sidenav /></div>
+        <div className='app-main-left-container'><Sidenav user={user} handleLogout={handleLogout} /></div>
         <div className='app-main-right-container'>
           <Navbar />
           <div className='welcome-main-container'>
             <div className='welcome-left-container'>
-              <p className='mng-text'>Welcome To</p>
+              <p className='mng-text'>Welcome To </p>
               <p className='mng-text'>Task Management Area</p>
               <p className='mng-para'>In this task management hub, the system seamlessly orchestrates task creation, assignment, and tracking, ensuring projects move forward smoothly and collaboratively.</p>
             </div>

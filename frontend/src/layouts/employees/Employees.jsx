@@ -21,7 +21,7 @@ import { FcStatistics } from "react-icons/fc";
 import AddEmployeeModal from './modals/AddEmployee';
 import axios from 'axios'
 
-function Employees() {
+function Employees({ user, handleLogout }) {
   const [isAddEmployeeModalOpen, setIsAddEmployeeModalOpen] = useState(false);
   const [employeesData, setEmployeesData] = useState([]);
   const [employeesStats, setEmployeesStats] = useState({
@@ -63,7 +63,7 @@ function Employees() {
     <>
       <AddEmployeeModal isOpen={isAddEmployeeModalOpen} onClose={closeAddEmployeeModal} />
       <div className='app-main-container'>
-        <div className='app-main-left-container'><Sidenav /></div>
+        <div className='app-main-left-container'><Sidenav user={user} handleLogout={handleLogout} /></div>
         <div className='app-main-right-container'>
           <Navbar />
           <div className='task-status-card-container'>
