@@ -28,10 +28,14 @@ function AddTaskModal({ isOpen, onClose }) {
         assignTo: '',
         project: '',
         startDate: '',
+        status: 'On Hold',
         priority: 'Most Important'
     });
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+    const handleStatusClick = (status) => {
+        setFormData({ ...formData, status });
     };
     const handleTagClick = (priority) => {
         setFormData({ ...formData, priority });
@@ -123,6 +127,45 @@ function AddTaskModal({ isOpen, onClose }) {
                         </Select>
                         <Input mt={3} mb={3} placeholder='Start Date' type='date' required name='startDate' value={formData.startDate} onChange={handleChange} />
 
+                        <div className='priority-container'>
+                            <p>Status: </p>
+                            <Tag
+                                size='lg'
+                                cursor={'pointer'}
+                                colorScheme={formData.status === 'On Hold' ? 'red' : 'gray'}
+                                borderRadius='full'
+                                onClick={() => handleStatusClick('On Hold')}
+                            >
+                                <p className='tag-text'>On Hold</p>
+                            </Tag>
+                            <Tag
+                                size='lg'
+                                cursor={'pointer'}
+                                colorScheme={formData.status === 'In Progress' ? 'blue' : 'gray'}
+                                borderRadius='full'
+                                onClick={() => handleStatusClick('In Progress')}
+                            >
+                                <p className='tag-text'>In Progress</p>
+                            </Tag>
+                            <Tag
+                                size='lg'
+                                cursor={'pointer'}
+                                colorScheme={formData.status === 'Testing' ? 'yellow' : 'gray'}
+                                borderRadius='full'
+                                onClick={() => handleStatusClick('Testing')}
+                            >
+                                <p className='tag-text'>Testing</p>
+                            </Tag>
+                            <Tag
+                                size='lg'
+                                cursor={'pointer'}
+                                colorScheme={formData.status === 'Completed' ? 'green' : 'gray'}
+                                borderRadius='full'
+                                onClick={() => handleStatusClick('Completed')}
+                            >
+                                <p className='tag-text'>Completed</p>
+                            </Tag>
+                        </div>
                         <div className='priority-container'>
                             <p>Priority: </p>
                             <Tag

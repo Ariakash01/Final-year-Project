@@ -75,15 +75,15 @@ function Attendance({ user, lastDate, handleLogout }) {
               <div className='stats-container container-bg1'>
                 <img className='stats-icon' src={totaltasks} alt="totaltasks" />
                 <div>
-                  <p className='stats-num'>1200</p>
-                  <p className='stats-text'>Total Timesheets</p>
+                  <p className='stats-num'>28</p>
+                  <p className='stats-text'>Total Working Days</p>
                 </div>
               </div>
               <div className='stats-container container-bg4'>
                 <img className='stats-icon' src={totalcomplete} alt="totalcomplete" />
                 <div>
-                  <p className='stats-num'>1200</p>
-                  <p className='stats-text'>Development Type</p>
+                  <p className='stats-num'>26</p>
+                  <p className='stats-text'>Present</p>
                 </div>
               </div>
             </div>
@@ -91,22 +91,22 @@ function Attendance({ user, lastDate, handleLogout }) {
               <div className='stats-container container-bg2'>
                 <img className='stats-icon' src={totalpending} alt="totalpending" />
                 <div>
-                  <p className='stats-num'>1200</p>
-                  <p className='stats-text'>Testing Type</p>
+                  <p className='stats-num'>1</p>
+                  <p className='stats-text'>Absent</p>
                 </div>
               </div>
               <div className='stats-container container-bg3'>
                 <img className='stats-icon' src={totalprogress} alt="totalprogress" />
                 <div>
-                  <p className='stats-num'>1200</p>
-                  <p className='stats-text'>Other Type</p>
+                  <p className='stats-num'>1</p>
+                  <p className='stats-text'>On Duty</p>
                 </div>
               </div>
             </div>
           </div>
           <div className='table-main-header'>
             <p className='table-header-text'>Attendance</p>
-            <button className='table-btn' onClick={openAddAttendanceModal}><IoMdAdd />Add Attendance</button>
+            {/*             <button className='table-btn' onClick={openAddAttendanceModal}><IoMdAdd />Add Attendance</button> */}
           </div>
           <TableContainer className="table-main-container">
             <Table variant="striped" colorScheme="teal">

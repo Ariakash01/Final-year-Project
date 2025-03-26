@@ -12,7 +12,8 @@ router.post('/task', async (req, res) => {
             assignTo,
             project,
             startDate,
-            priority
+            priority,
+            status,
         } = req.body;
 
         const newTask = new Task({
@@ -21,7 +22,8 @@ router.post('/task', async (req, res) => {
             assignTo,
             project,
             startDate,
-            priority
+            priority,
+            status,
         });
 
         await newTask.save();

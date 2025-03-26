@@ -123,63 +123,24 @@ function Timesheets({ user, handleLogout }) {
                   <Th>Action</Th>
                 </Tr>
               </Thead>
-              {/*   <Tbody>
-                <Tr>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                </Tr>
-                <Tr>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                </Tr>
-                <Tr>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                </Tr>
-                <Tr>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                </Tr>
-                <Tr>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                  <Td>inches</Td>
-                </Tr>
-              </Tbody> */}
+              <Tbody>
+                {
+                  timesheetsData.map(timesheetsData => (
+                    <Tr>
+                      <Td>{timesheetsData.notes}</Td>
+                      <Td>{timesheetsData.employee}</Td>
+                      <Td>{timesheetsData.project}</Td>
+                      <Td>{timesheetsData.task}</Td>
+                      <Td>{timesheetsData.progress}</Td>
+                      <Td>{timesheetsData.timeSpent}</Td>
+                      <Td>{new Date(timesheetsData.date).toLocaleDateString()}</Td>
+                      <Td>{timesheetsData.type}</Td>
+                      <Td>Edit</Td>
+                    </Tr>
+                  ))
+                }
+
+              </Tbody>
             </Table>
           </TableContainer>
         </div>

@@ -28,6 +28,11 @@ const taskSchema = new mongoose.Schema({
         enum: ['Most Important', 'Important', 'Least Important'],
         required: true,
     },
+    status: {
+        type: String,
+        enum: ['On Hold', 'In Progress', 'Testing', 'Completed'],
+        required: true,
+    },
 });
 
 module.exports = mongoose.model('Task', taskSchema);

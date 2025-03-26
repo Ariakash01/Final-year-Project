@@ -193,17 +193,11 @@ const Attendance = require("../models/attendances");
 const { createCanvas, loadImage } = canvas;
 const path = require("path");
 const router = express.Router();
-
 faceapi.env.monkeyPatch(canvas);
-
-// Multer for image upload
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
-
-// Load Face Recognition Models once
 let isModelsLoaded = false;
 const modelPath = path.join(__dirname, "../models");
-
 const loadModels = async () => {
     if (isModelsLoaded) return;
     try {
@@ -218,10 +212,7 @@ const loadModels = async () => {
 
     }
 };
-
-loadModels();  // Load once on server start
-
-// Optimize image size for faster face detection
+loadModels();
 const optimizeImage = (imageBuffer) => {
     return new Promise((resolve, reject) => {
         loadImage(imageBuffer)
@@ -234,17 +225,11 @@ const optimizeImage = (imageBuffer) => {
             .catch(reject);
     });
 };
-
-// Convert Buffer to Canvas
 const bufferToCanvas = async (buffer) => {
     const canvasImage = await optimizeImage(buffer);  // Resize before processing
     return canvasImage;
 };
-
-// Cache user descriptors in-memory to speed up login (this can be persisted in Redis for production)
 let userDescriptorsCache = [];
-
-// Pre-load user descriptors in-memory (this should ideally be updated when a new user registers)
 const preloadUserDescriptors = async () => {
     const users = await Employee.find({}, "email faceData");
     userDescriptorsCache = users.map(user => ({
@@ -252,11 +237,8 @@ const preloadUserDescriptors = async () => {
         faceData: new Float32Array(user.faceData),
     }));
 };
-
-preloadUserDescriptors();  // Pre-load the descriptors once during server startup
-
-// Register API
-router.post("/register", upload.single("faceImage"), async (req, res) => {
+preloadUserDescriptors();
+/* router.post("/register", upload.single("faceImage"), async (req, res) => {
     try {
         console.log("🟢 Register API called");
         const { firstName, lastName, email, phone, role, gender } = req.body;
@@ -308,9 +290,52 @@ router.post("/register", upload.single("faceImage"), async (req, res) => {
         console.error("❌ Error registering user:", error);
         res.status(500).json({ message: "Error registering user", error });
     }
-});
+}); */
+router.post("/register", upload.single("faceImage"), async (req, res) => {
+    try {
+        console.log("🟢 Register API called");
+        const { firstName, lastName, email, phone, cnic, role, status, gender } = req.body;
 
-// Function to Compare Face Descriptors using Approximate Nearest Neighbor
+        if (!req.file) {
+            return res.status(400).json({ message: "No image uploaded" });
+        }
+
+        const faceBuffer = req.file.buffer;
+        const canvasImage = await bufferToCanvas(faceBuffer);
+        const detections = await faceapi.detectSingleFace(canvasImage)
+            .withFaceLandmarks()
+            .withFaceDescriptor();
+
+        if (!detections || !detections.descriptor) {
+            return res.status(400).json({ message: "No face detected. Try again." });
+        }
+
+        const faceDescriptorArray = Array.from(detections.descriptor);
+        if (faceDescriptorArray.length !== 128) {
+            return res.status(400).json({ message: "Invalid face descriptor." });
+        }
+
+        const employee = new Employee({
+            firstName,
+            lastName,
+            email,
+            phone,
+            cnic,
+            role,
+            status,
+            gender,
+            faceData: faceDescriptorArray,
+        });
+
+        await employee.save();
+        preloadUserDescriptors();
+        console.log("🟢 User registered successfully!");
+        res.status(201).json({ message: "User registered successfully" });
+    } catch (error) {
+        console.error("❌ Error registering user:", error);
+        res.status(500).json({ message: "Error registering user", error });
+    }
+});
 const matchFace = async (imageBuffer) => {
     const img = await loadImage(`data:image/jpeg;base64,${imageBuffer.toString("base64")}`);
     const detection = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor();
@@ -350,13 +375,9 @@ const matchFace = async (imageBuffer) => {
     console.log(`✅ Best match: ${bestMatch || "None"} (Distance: ${bestDistance.toFixed(4)})`);
     return matchFound ? bestMatch : null;
 };
-
-// Generate JWT Token
 const generateToken = (email) => {
     return jwt.sign({ email }, "your-secret-key", { expiresIn: "1h" });
 };
-
-// Login Route
 router.post("/login", upload.single("faceImage"), async (req, res) => {
     try {
         if (!req.file) {
@@ -409,7 +430,6 @@ router.post("/login", upload.single("faceImage"), async (req, res) => {
         return res.status(500).json({ message: "Internal server error" });
     }
 });
-
 router.post('/login-details', async (req, res) => {
     try {
         console.log("Request received:", req.body);
@@ -431,6 +451,4 @@ router.post('/login-details', async (req, res) => {
         res.status(500).json({ message: 'Internal Server Error' });
     }
 });
-
-
 module.exports = router;

@@ -126,7 +126,7 @@ function Employees({ user, handleLogout }) {
               <Tbody>
                 {employeesData && employeesData.map((employee) => (
                   <Tr key={employee._id}>
-                    <Td>{employee.employee_id}</Td>
+                    <Td>{employee._id}</Td>
                     <Td>{`${employee.firstName} ${employee.lastName}`}</Td>
                     <Td>{employee.email}</Td>
                     <Td>{employee.cnic}</Td>
@@ -134,7 +134,7 @@ function Employees({ user, handleLogout }) {
                     <Td>{employee.status}</Td>
                     <Td>{employee.gender}</Td>
                     <Td>
-                      Button
+                      Edit
                     </Td>
                   </Tr>
                 ))}

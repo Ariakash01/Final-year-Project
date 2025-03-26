@@ -1,0 +1,28 @@
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    row-gap: 0px;
+
+}
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_pro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .width {
+        width: 45%;
+    }
+
+    .size {
+        width: 45%;
+    }
+}
