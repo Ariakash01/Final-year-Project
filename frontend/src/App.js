@@ -10,6 +10,7 @@ import Attendance from './layouts/attendance/Attendance.jsx'
 import { useState } from 'react';
 import CameraCapture from './layouts/cameraCapture/CameraCapture.jsx';
 import RegisterEmployee from './layouts/register/Register.jsx';
+import Logout from './layouts/logout/Logot.jsx';
 
 function App() {
   const [user, setUser] = useState([]);
@@ -52,7 +53,7 @@ function App() {
           <Route path='/admin/tasks' element={<Tasks user={user} setUser={setUser} lastDate={lastDate} setlastDate={setlastDate} handleLogout={handleLogout} />} />
           <Route path='/admin/timesheets' element={<Timesheets user={user} setUser={setUser} lastDate={lastDate} setlastDate={setlastDate} handleLogout={handleLogout} />} />
           <Route path='/admin/attendance' element={<Attendance user={user} setUser={setUser} lastDate={lastDate} setlastDate={setlastDate} handleLogout={handleLogout} />} />
-
+          <Route path="/logout" element={<Logout />} />
         </Routes>
       </Router>
     </>

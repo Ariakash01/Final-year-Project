@@ -27,7 +27,7 @@ function Sidenav({ user, handleLogout }) {
         <Link to="/admin/tasks"><div className={`sidenav-list ${location.pathname === "/admin/tasks" ? "default-hover" : ""}`}><span><FaTasks className='sidenav-icon' /></span><p className='sidenav-list-text'>Tasks</p></div></Link>
         <Link to="/admin/timesheets"><div className={`sidenav-list ${location.pathname === "/admin/timesheets" ? "default-hover" : ""}`}><span><IoIosTime className='sidenav-icon' /></span><p className='sidenav-list-text'>Timesheets</p></div></Link>
         <Link to="/admin/attendance"><div className={`sidenav-list ${location.pathname === "/admin/attendance" ? "default-hover" : ""}`}><span><MdInsertInvitation className='sidenav-icon' /></span><p className='sidenav-list-text'>Attendance</p></div></Link>
-        <Link to="/register" onClick={() => handleLogout()}>
+        <Link to="/logout" onClick={() => handleLogout()}>
           <div className={`sidenav-list ${location.pathname === "/logout" ? "default-hover" : ""}`}>
             <span><LuLogOut className="sidenav-icon" /></span>
             <p className="sidenav-list-text">Logout</p>
