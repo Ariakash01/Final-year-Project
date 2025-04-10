@@ -10,7 +10,7 @@ import Attendance from './layouts/attendance/Attendance.jsx'
 import { useState } from 'react';
 import CameraCapture from './layouts/cameraCapture/CameraCapture.jsx';
 import RegisterEmployee from './layouts/register/Register.jsx';
-import Logout from './layouts/logout/Logot.jsx';
+import Logout from './layouts/logout/Logout.jsx';
 
 function App() {
   const [user, setUser] = useState([]);

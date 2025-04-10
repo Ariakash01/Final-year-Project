@@ -7,7 +7,7 @@ import { FaTasks } from "react-icons/fa";
 import { IoIosTime } from "react-icons/io";
 import { MdInsertInvitation } from "react-icons/md";
 import { LuLogOut } from "react-icons/lu";
-import profile from '../../assets/sidenav/profil.jpg';
+import profile from '../../assets/sidenav/download.png';
 import { Link, useLocation } from "react-router-dom";
 
 function Sidenav({ user, handleLogout }) {

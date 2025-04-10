@@ -108,7 +108,7 @@ const matchFace = async (imageBuffer) => {
     console.log("🔍 Face detected, comparing with stored users...");
     const queryDescriptor = new Float32Array(detection.descriptor);
 
-    const threshold = 0.6;
+    const threshold = 0.3;
     let bestMatch = null;
     let bestDistance = 1.0;
 
@@ -128,6 +128,7 @@ const matchFace = async (imageBuffer) => {
     }
     else {
         console.log(`No Best match Found In Database`);
+        console.log(`✅ Best match: ${bestDistance || "None"}` );
     }
 
     return bestDistance < threshold ? bestMatch : null;

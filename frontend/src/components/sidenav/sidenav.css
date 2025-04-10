@@ -18,6 +18,8 @@
 
 .sidenav-profile-img {
     border-radius: 50%;
+padding: 15px;
+background-color: #fff;
     height: 86px;
     width: 86px;
 }
