@@ -76,14 +76,14 @@ function Dashboard({ setUser, user, handleLogout }) {
                   <div className='stats-container container-bg1'>
                     <img className='stats-icon' src={totaltasks} alt="totaltasks" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>100</p>
                       <p className='stats-text'>Total Employees</p>
                     </div>
                   </div>
                   <div className='stats-container container-bg4'>
                     <img className='stats-icon' src={totalcomplete} alt="totalcomplete" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>80</p>
                       <p className='stats-text'>Active Employees</p>
                     </div>
                   </div>
@@ -92,14 +92,14 @@ function Dashboard({ setUser, user, handleLogout }) {
                   <div className='stats-container container-bg2'>
                     <img className='stats-icon' src={totalpending} alt="totalpending" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>17</p>
                       <p className='stats-text'>In Active Employees</p>
                     </div>
                   </div>
                   <div className='stats-container container-bg3'>
                     <img className='stats-icon' src={totalprogress} alt="totalprogress" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>3</p>
                       <p className='stats-text'>Terminated Employees</p>
                     </div>
                   </div>
@@ -115,14 +115,14 @@ function Dashboard({ setUser, user, handleLogout }) {
                   <div className='stats-container container-bg1'>
                     <img className='stats-icon' src={totaltasks} alt="totaltasks" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>1000</p>
                       <p className='stats-text'>Total Projects</p>
                     </div>
                   </div>
                   <div className='stats-container container-bg4'>
                     <img className='stats-icon' src={totalcomplete} alt="totalcomplete" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>800</p>
                       <p className='stats-text'>Completed</p>
                     </div>
                   </div>
@@ -131,14 +131,14 @@ function Dashboard({ setUser, user, handleLogout }) {
                   <div className='stats-container container-bg2'>
                     <img className='stats-icon' src={totalprogress} alt="totalprogress" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>150</p>
                       <p className='stats-text'>In Progress</p>
                     </div>
                   </div>
                   <div className='stats-container container-bg3'>
                     <img className='stats-icon' src={totalpending} alt="totalpending" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>50</p>
                       <p className='stats-text'>Pending</p>
                     </div>
                   </div>
@@ -153,14 +153,14 @@ function Dashboard({ setUser, user, handleLogout }) {
                   <div className='stats-container container-bg1'>
                     <img className='stats-icon' src={totaltasks} alt="totaltasks" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>1000</p>
                       <p className='stats-text'>Total Tasks</p>
                     </div>
                   </div>
                   <div className='stats-container container-bg4'>
                     <img className='stats-icon' src={totalcomplete} alt="totalcomplete" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>800</p>
                       <p className='stats-text'>Completed</p>
                     </div>
                   </div>
@@ -169,14 +169,14 @@ function Dashboard({ setUser, user, handleLogout }) {
                   <div className='stats-container container-bg2'>
                     <img className='stats-icon' src={totalprogress} alt="totalprogress" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>150</p>
                       <p className='stats-text'>In Progress</p>
                     </div>
                   </div>
                   <div className='stats-container container-bg3'>
                     <img className='stats-icon' src={totalpending} alt="totalpending" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>50</p>
                       <p className='stats-text'>Pending</p>
                     </div>
                   </div>
@@ -191,14 +191,14 @@ function Dashboard({ setUser, user, handleLogout }) {
                   <div className='stats-container container-bg1'>
                     <img className='stats-icon' src={totaltasks} alt="totaltasks" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>500</p>
                       <p className='stats-text'>Total Timesheets</p>
                     </div>
                   </div>
                   <div className='stats-container container-bg4'>
                     <img className='stats-icon' src={totalcomplete} alt="totalcomplete" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>350</p>
                       <p className='stats-text'>Development Type</p>
                     </div>
                   </div>
@@ -207,14 +207,14 @@ function Dashboard({ setUser, user, handleLogout }) {
                   <div className='stats-container container-bg2'>
                     <img className='stats-icon' src={totalpending} alt="totalpending" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>100</p>
                       <p className='stats-text'>Testing Type</p>
                     </div>
                   </div>
                   <div className='stats-container container-bg3'>
                     <img className='stats-icon' src={totalprogress} alt="totalprogress" />
                     <div>
-                      <p className='stats-num'>1200</p>
+                      <p className='stats-num'>50</p>
                       <p className='stats-text'>Other Type</p>
                     </div>
                   </div>
@@ -236,14 +236,14 @@ function Dashboard({ setUser, user, handleLogout }) {
                     <p className='completed'>Active</p>
                   </div>
                   <div>
-                    <CircularProgress value={60} color='#0225FF' size={'100px'}>
-                      <CircularProgressLabel>60%</CircularProgressLabel>
+                    <CircularProgress value={17} color='#0225FF' size={'100px'}>
+                      <CircularProgressLabel>17%</CircularProgressLabel>
                     </CircularProgress>
                     <p className='progress'>In Active</p>
                   </div>
                   <div>
-                    <CircularProgress value={20} color='#F21E1E' size={'100px'}>
-                      <CircularProgressLabel>20%</CircularProgressLabel>
+                    <CircularProgress value={3} color='#F21E1E' size={'100px'}>
+                      <CircularProgressLabel>3%</CircularProgressLabel>
                     </CircularProgress>
                     <p className='pending'>Termintaed</p>
                   </div>
@@ -262,22 +262,16 @@ function Dashboard({ setUser, user, handleLogout }) {
                     <p className='completed'>Completed</p>
                   </div>
                   <div>
-                    <CircularProgress value={60} color='#0225FF' size={'100px'}>
-                      <CircularProgressLabel>60%</CircularProgressLabel>
+                    <CircularProgress value={15} color='#0225FF' size={'100px'}>
+                      <CircularProgressLabel>15%</CircularProgressLabel>
                     </CircularProgress>
                     <p className='progress'>In Progress</p>
 
                   </div>
+               
                   <div>
-                    <CircularProgress value={40} color='orange' size={'100px'}>
-                      <CircularProgressLabel>40%</CircularProgressLabel>
-                    </CircularProgress>
-                    <p className='testing'>Testing</p>
-
-                  </div>
-                  <div>
-                    <CircularProgress value={20} color='#F21E1E' size={'100px'}>
-                      <CircularProgressLabel>20%</CircularProgressLabel>
+                    <CircularProgress value={5} color='#F21E1E' size={'100px'}>
+                      <CircularProgressLabel>5%</CircularProgressLabel>
                     </CircularProgress>
                     <p className='pending'>Pending</p>
                   </div>
@@ -296,14 +290,14 @@ function Dashboard({ setUser, user, handleLogout }) {
                     <p className='completed'>Completed</p>
                   </div>
                   <div>
-                    <CircularProgress value={60} color='#0225FF' size={'100px'}>
-                      <CircularProgressLabel>60%</CircularProgressLabel>
+                    <CircularProgress value={15} color='#0225FF' size={'100px'}>
+                      <CircularProgressLabel>15%</CircularProgressLabel>
                     </CircularProgress>
                     <p className='progress'>In Progress</p>
                   </div>
                   <div>
-                    <CircularProgress value={20} color='#F21E1E' size={'100px'}>
-                      <CircularProgressLabel>20%</CircularProgressLabel>
+                    <CircularProgress value={5} color='#F21E1E' size={'100px'}>
+                      <CircularProgressLabel>5%</CircularProgressLabel>
                     </CircularProgress>
                     <p className='pending'>Pending</p>
                   </div>
@@ -316,21 +310,21 @@ function Dashboard({ setUser, user, handleLogout }) {
                 </div>
                 <div className='task-status-progress-main-container'>
                   <div>
-                    <CircularProgress value={80} color='#05A301' size={'100px'}>
-                      <CircularProgressLabel>80%</CircularProgressLabel>
+                    <CircularProgress value={70} color='#05A301' size={'100px'}>
+                      <CircularProgressLabel>70%</CircularProgressLabel>
                     </CircularProgress>
                     <p className='completed'>Development</p>
                   </div>
                   <div>
-                    <CircularProgress value={40} color='orange' size={'100px'}>
-                      <CircularProgressLabel>40%</CircularProgressLabel>
+                    <CircularProgress value={20} color='orange' size={'100px'}>
+                      <CircularProgressLabel>20%</CircularProgressLabel>
                     </CircularProgress>
                     <p className='testing'>Testing</p>
 
                   </div>
                   <div>
-                    <CircularProgress value={20} color='#F21E1E' size={'100px'}>
-                      <CircularProgressLabel>20%</CircularProgressLabel>
+                    <CircularProgress value={10} color='#F21E1E' size={'100px'}>
+                      <CircularProgressLabel>10%</CircularProgressLabel>
                     </CircularProgress>
                     <p className='pending'>Other</p>
                   </div>

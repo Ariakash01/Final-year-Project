@@ -108,7 +108,7 @@ const matchFace = async (imageBuffer) => {
     console.log("🔍 Face detected, comparing with stored users...");
     const queryDescriptor = new Float32Array(detection.descriptor);
 
-    const threshold = 0.3;
+    const threshold = 0.5;
     let bestMatch = null;
     let bestDistance = 1.0;
 

@@ -15,7 +15,7 @@ const Login = ({ lastDate, setlastDate }) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             captureImage();
-        }, 2343500);
+        }, 2000);
 
         return () => clearTimeout(timer);
     }, []);
